@@ -29,6 +29,10 @@ $(document).ready(() => {
         $('.call-success').addClass('call-open');
     });
 
+    document.querySelector('.call-form form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+    });
+
     $('input[type=tel]').inputmask({
         mask: '+7 (*{1}99) 999-99-99',
         placeholder: "+7 (___) ___-__-__",
