@@ -1,0 +1,97 @@
+body {
+    font-family: $font-main;
+    font-weight: $font-weight-medium;
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-primary-text;
+    min-height: 0;
+    background-color: #BFC2C3;
+    scrollbar-gutter: stable;
+}
+
+.body-noscroll {
+    overflow-y: hidden;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $font-second;
+    font-weight: $font-weight-regular;
+    font-size: 60px;
+    color: #BBBBBB;
+}
+
+a {
+    color: $color-primary-text;
+}
+
+.section-box {
+    max-width: 1600px;
+    width: 100%;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    @media #{$desktop} {
+        padding: 0 25px;
+    }
+
+    @media #{$phone} {
+        padding: 0 10px;
+    }
+}
+
+.btn {
+    line-height: 60px;
+    color: $color-secondary-text;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 288px;
+    height: max-content;
+    background-color: #000000CC;
+    backdrop-filter: blur(2px);
+    transition: all .1s linear;
+    border: none;
+    border-radius: 60px;
+
+    &:hover {
+        color: $color-active;
+    }
+
+    span {
+        position: absolute;
+        width: 49px;
+        height: 49px;
+        background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 64.58%);
+        border-radius: 50%;
+
+        &:nth-of-type(1) {
+            top: 6px;
+            left: 7px;
+        }
+
+        &:nth-of-type(2) {
+            rotate: 180deg;
+            top: 6px;
+            right: 7px;
+        }
+    }
+
+    &-tel {
+        &::before {
+            content: '';
+            position: absolute;
+            background: url(../images/svg/phone-icon.svg) no-repeat;
+            width: 18px;
+            height: 18px;
+            top: 22px;
+            left: 26px;
+            z-index: 1;
+        }
+    }
+}
