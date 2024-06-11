@@ -29,6 +29,8 @@ $(document).ready(() => {
         $('.call-success').addClass('call-open');
     });
 
+
+     //блокировка формы
     document.querySelector('.call-form form').addEventListener('submit', function(event) {
         event.preventDefault(); 
     });
